@@ -1,6 +1,5 @@
 FROM node:18-alpine
-WORKDIR /app
-COPY . .
+RUN npm install -g omniroute
 EXPOSE 10000
 ENV PORT=10000
-CMD ["node", "src/index.js"]
+CMD ["omniroute"]
